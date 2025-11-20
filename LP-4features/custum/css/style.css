@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import "https://unpkg.com/ress/dist/ress.min.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1;
+    counter-reset: num 0;
+    position: relative;
+    background-color: #595959;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 70%;
+    height: 100%;
+    background: #d1eff1;
+}
+
+main {
+    background-color: #595959;
+    padding: 100px 0;
+}
+
+section {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    padding-left: 120px;
+}
+
+section+section {
+    margin-top: 150px;
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #acbbbb;
+    padding-top: 56px;
+
+}
+
+h2::before {
+    font-family:serif;
+    position: absolute;
+    top: 0;
+    font-size: 48px;
+    counter-increment: num 1;
+    content: counter(num, decimal-leading-zero);
+ 
+
+}
+
+h2 span {
+    color: #acbbbb;
+    writing-mode: vertical-rl;
+    padding-left: .5em;
+    transform: rotate(180deg);
+    border-left: 2px solid #acbbbb;
+    letter-spacing: .1em;
+
+}
+
+h2 span.jp {
+    transform: rotate(180deg);
+    text-orientation: sideways-right;
+    border-left: 2x solid #3aaeb2;
+}
+
+section img {
+    width: 400px;
+}
+
+.text {
+    width: 48%;
+    margin-left: auto;
+
+}
+
+.item-copy {
+    font-family:serif;
+    text-shadow: 2px 2px black;
+    color: #DCD2D2;
+    font-size: 30px;
+    margin-bottom: 1em;
+    line-height: 1.8;
+
+}
+
+section p.desc{
+    font-family: serif;
+    text-shadow: 1.5px 1.5px black;
+    color: #DCD2D2;
+  
+}
+.item-copy span {
+    background-color: #595959;
+    line-height: 1.6;
+}
+
+footer {
+    background: #E7E7E7;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+footer p {
+    
+    color: rgb(18, 17, 17);
+    font-family:serif;
+    width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+footer .foot-copy {
+    text-shadow: 1px 1px rgb(161, 158, 158);
+    border-bottom:solid;
+    font-family:serif;
+    color: rgb(18, 17, 17);
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+
+
+
+footer .logo {
+    display: block;
+    margin: 40px auto;
+}
+
+footer .copyright {
+    color: black;
+    font-size: 0.8em;
+}

@@ -1,0 +1,137 @@
+@charset "UTF-8"; /* 文字コード指定 */
+@import "https://unpkg.com/ress/dist/ress.min.css"; /* リセットCSS読込 */
+* {
+  box-sizing: border-box; /* padding・borderを幅に含める */
+}
+
+body {
+  background: #ccc; /* 背景色 */
+  text-align: center; /* テキスト中央揃え */
+  line-height: 1; /* 行間リセット */
+}
+
+a {
+  text-decoration: none; /* 下線を消す */
+}
+
+a:hover {
+  opacity: 0.8; /* ホバー時に半透明 */
+}
+
+img {
+  max-width: 100%; /* 親の幅に合わせて縮小 */
+  vertical-align: middle; /* 行内での画像のズレを解消 */
+}
+
+header,
+footer {
+  background: white; /* 背景色 */
+  padding: 20px; /* 内側余白 */
+}
+
+main {
+  color: white; /* テキスト色 */
+}
+
+section {
+  width: 900px; /* 横幅 */
+  margin: auto; /* 水平中央寄せ */
+}
+
+section + section {
+  margin-top: 100px; /* セクション間の余白 */
+}
+
+section p {
+  width: 80%; /* 段落の横幅 */
+  margin: auto; /* 中央寄せ */
+  line-height: 3; /* 行間 */
+}
+
+h2 {
+  font-size: 40px; /* 文字サイズ */
+  margin-bottom: 0.8em; /* 下余白 */
+  letter-spacing: 0.5em; /* 文字間隔 */
+}
+
+/*==============================*/
+/*          #first-view         */
+/*==============================*/
+
+#first-view {
+  width: 100%; /* 横幅いっぱい */
+  margin-bottom: 120px; /* 下余白 */
+}
+
+#first-view img {
+  width: 100%; /* 画像を横幅いっぱいに */
+}
+
+/***** .btn（詳細ボタン） *****/
+.btn {
+  display: block; /* ブロック要素化 */
+  background: white; /* 背景色 */
+  border: 4px solid #212121; /* 枠線 */
+  color: #212121; /* 文字色 */
+  width: 400px; /* ボタン幅 */
+  padding: 20px 0; /* 上下の余白 */
+  font-size: 20px; /* 文字サイズ */
+  margin: 40px auto 0; /* 上余白＋中央寄せ */
+  position: relative; /* 擬似要素配置の基準 */
+}
+
+/* 三角形 */
+.btn::before {
+  content: ""; /* 擬似要素表示 */
+  position: absolute; /* 絶対配置 */
+  top: 0; /* 上端合わせ */
+  bottom: 0; /* 下端合わせ */
+  left: 1em; /* 左からの距離 */
+  margin: auto; /* 上下中央に配置 */
+  width: 0; /* 三角形なので0 */
+  height: 0; /* 三角形なので0 */
+  border: 0.5em solid transparent; /* 透明ボーダーで三角形の形を作る */
+  border-left: 1em solid #212121; /* 左方向の三角形を表示 */
+}
+
+/*==============================*/
+/*           #product           */
+/*==============================*/
+
+.imgs {
+  display: flex; /* 横並び配置 */
+  flex-wrap: wrap; /* 折り返し */
+  width: 860px; /* 画像群の幅 */
+  margin: 40px auto 0; /* 上余白＋中央寄せ */
+}
+
+.imgs img:nth-of-type(n + 2) {
+  margin-left: 20px; /* 2枚目以降は左余白 */
+}
+
+.imgs img:nth-of-type(n + 5) {
+  margin-top: 20px; /* 5枚目以降は上段と間隔 */
+}
+
+.imgs img:nth-of-type(4n + 5) {
+  margin-left: 0; /* 5・9・13枚目などの左余白リセット */
+}
+
+/*==============================*/
+/*            #access           */
+/*==============================*/
+
+#access {
+  width: 100%; /* 横幅いっぱい */
+}
+
+.gmap {
+  height: 500px; /* 埋め込み地図の高さ */
+  margin-top: 80px; /* 上余白 */
+  overflow: hidden; /* はみ出しを隠す */
+}
+
+.gmap iframe {
+  width: 100%; /* 地図を横幅いっぱいに */
+  height: 100%; /* 親要素いっぱいの高さに */
+}
